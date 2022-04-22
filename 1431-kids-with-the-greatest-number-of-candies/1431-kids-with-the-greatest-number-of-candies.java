@@ -1,7 +1,13 @@
 class Solution {
     public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
         ArrayList<Boolean> result = new ArrayList<Boolean>(candies.length);
-        for (int i = 0 ; i < candies.length; i++ ){
+        int max = 0; 
+        for(int i: candies){
+            if(max < i){
+                max = i;
+            }
+        }
+       /* for (int i = 0 ; i < candies.length; i++ ){
             boolean ans = true;
             int a = candies[i] + extraCandies; 
             for (int j = 0 ; j < candies.length; j++){
@@ -15,7 +21,12 @@ class Solution {
 
             }
             result.add(ans); 
+        }*/
+        for( int i = 0; i< candies.length; i++){
+            if(candies[i] + extraCandies >= max) result.add(true);
+            else result.add(false);
         }
         return result;
-    }
+        
+     }
 }
