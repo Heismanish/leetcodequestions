@@ -13,12 +13,10 @@ class Solution {
                 } else {
                     ans  = true;
                 }
-
             }
             result.add(ans); 
         }
-        
-     
+  
         return result;
         
     }
